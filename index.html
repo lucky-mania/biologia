@@ -8,7 +8,6 @@
         header{
     background-image: linear-gradient(to bottom, green, black);
     min-height: 150px;
-    text-align: center;
     padding-top: 40px;
     text-shadow: 2px 2px 0px black;
 
@@ -19,22 +18,13 @@ header > h1 {
     margin-bottom: 20px;
     font-size: 3em;
     font-weight: normal;
-}
-header > p {
-    color: aliceblue;
-    font-family: var(--font-padrao);
-    font-size: 1.2em;
-    max-width: 500px;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 50px;
-}
+     text-align: center;
 
-        body{
-            background-color: gray;
-
-        }
+}
+h1{
+    text-align: center;
+}
+        
         main{
             background-color: aliceblue;
             padding: 20px;
@@ -47,9 +37,7 @@ header > p {
         img{
             width: 100%;
         }
-h1{
-text-align: center;
-}
+
 div.video{
     background-image: linear-gradient(to bottom, green, black);
     margin: 0px -20px 30px -20px;
@@ -116,294 +104,41 @@ div.video > iframe{
     <main>
         <div id="quiz-container">
             <h1> VIDEO SOBRE 
-                RELAÇÕES ECOLÓGICAS</h1>
+                RELAÇÕES ECOLÓGICAS</h1> 
             <div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/CBN9WgeGkTA?si=vWnyHwbYGx1VcYYO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            <h1>Questões</h1>
+           <hr>
+            <h1>Questões</h1><hr>
             <div id="question"></div>
             <div id="answers"></div>
             <div id="timer">Pontos restantes: <span id="time">1000</span> pontos
-        
+        <hr>
             </div>
             <div id="score">Acertos: <span id="correct-count">0</span> | Erros: <span id="incorrect-count">0</span></div>
         </div>
         <script>
             const questions = [
                 {
-                    question: "Qual é o tipo de relação ecológica em que duas espécies se beneficiam mutuamente?",
+                    question: "1.Qual é o tipo de relação ecológica em que duas espécies se beneficiam mutuamente?",
         
-                    answers: ["Competição", "Comensalismo", "Predação", "Mutualismo"],
-                    correct: "Mutualismo"
+                    answers: ["A. Competição", "B. Comensalismo", "C. Predação", "D. Mutualismo"],
+                    correct: "D. Mutualismo"
                 },
                 {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
+                    question: "2.Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
+                    
+                    answers: ["A. Não é afetada", "B.Se beneficia também", "C. É prejudicada", "D. Morre"],
+                    correct: "A. Não é afetada"
                 },
                 {
-                    question: "Na relação de parasitismo, uma espécie se beneficia, enquanto a outra é:",
-                    answers: ["Prejudicada", "Morta", "Não é afetada", "Beneficiada"],
-                    correct: "Prejudicada"
+                    question: "3.Na relação de parasitismo, uma espécie se beneficia, enquanto a outra é:",
+                    
+                    answers: ["A. Prejudicada", "B. Morta", "C. Não é afetada", "D. Beneficiada"],
+                    correct: "A. Prejudicada"
+                },{
+                    question: "isso e tudo pessoal!"
+                   
                 },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                 {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
-                {
-                    question: "Na relação ecológica de comensalismo, uma espécie se beneficia, enquanto a outra:",
-                    answers: ["Não é afetada", "Se beneficia também", " É prejudicada", "Morre"],
-                    correct: "Não é afetada"
-                },
+    
             ];
             const questionElement = document.getElementById("question");
             const answersElement = document.getElementById("answers");
@@ -467,5 +202,6 @@ div.video > iframe{
             startTimer();
         </script>
     </main>
+    
 </body>
 </html>
